@@ -4,7 +4,7 @@ import addIcon from '../../images/icons/add.png';
 const AddTask = () => {
     return (
         <>
-          <img src={addIcon}/>
+          <img src={addIcon} alt='plus'/>
         </>
     );
 }

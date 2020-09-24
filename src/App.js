@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch, Route
@@ -11,14 +11,16 @@ import { DoneView as Done } from "./views/DoneView/DoneView";
 import { UndoneView as Undone } from "./views/UndoneView/UndoneView";
 
 function App() {
+  const [allTasks, updateList] = useState([]);
+  
   return (
               <Router>
                   <Switch>
                       <div className="App">
                         <Nav/>
                         <Route exact path = "/" component={Home}/>
-                        <Route path = "/done" component={Done}/>
-                        <Route path = "/undone" component={Undone}/>
+                        <Route path = "/done" render= {() => <Done allTasks={allTasks}/>}/>
+                        <Route path = "/undone" render={() => <Undone allTasks={allTasks}/>}/>
                         <AddIcon/>
                       </div>
                   </Switch>
