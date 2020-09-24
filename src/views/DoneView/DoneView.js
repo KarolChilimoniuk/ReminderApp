@@ -1,7 +1,17 @@
-import React from "react";
+import React from 'react';
+import removeIcon from '../../images/icons/minus 1.png';
+import doneRect from '../../images/icons/doneRect.png';
 
 export const DoneView = ({allTasks}) => {
-    const tasks = allTasks.filter(task => task.status === 'done').map(task => <li>task.name</li>);
+    const tasks = allTasks.filter(task => task.status === 'done').map(task => { 
+        return (
+            <div>
+               <li>{task.name}</li>
+               <img src={removeIcon}/>
+               <img src={doneRect}/>
+            </div>
+        )}
+    );
     return (
         <div>
             <h3>DoneView</h3>
