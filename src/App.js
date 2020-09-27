@@ -1,30 +1,32 @@
-import React, { useState } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch, Route
-} from "react-router-dom";
-import './App.css';
-import Nav from './components/Navigation/Navigation';
-import Home from './views/HomeView/HomeView';
-import AddIcon from './components/AddTask/AddTask';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.css";
+import Nav from "./components/Navigation/Navigation";
+import Home from "./views/HomeView/HomeView";
+import AddIcon from "./components/AddTask/AddTask";
+import NewTaskModal from "./components/Modals/NewTaskModal/NewTaskModal";
 import { DoneView as Done } from "./views/DoneView/DoneView";
 import { UndoneView as Undone } from "./views/UndoneView/UndoneView";
 
 function App() {
   const [allTasks, updateList] = useState([]);
-  
+  const [modalVisibility, changeModalVisibility] = useState(false);
+
   return (
-              <Router>
-                  <Switch>
-                      <div className="App">
-                        <Nav/>
-                        <Route exact path = "/" render={() => <Home allTasks={allTasks}/>}/>
-                        <Route path = "/done" render= {() => <Done allTasks={allTasks}/>}/>
-                        <Route path = "/undone" render={() => <Undone allTasks={allTasks}/>}/>
-                        <AddIcon/>
-                      </div>
-                  </Switch>
-              </Router>
+    <Router>
+      <Switch>
+        <div className="App">
+          <Nav />
+          <Route exact path="/" render={() => <Home allTasks={allTasks} />} />
+          <Route path="/done" render={() => <Done allTasks={allTasks} />} />
+          <Route path="/undone" render={() => <Undone allTasks={allTasks} />} />
+          <AddIcon
+            onClickHandler={() => changeModalVisibility(!modalVisibility)}
+          />
+          <NewTaskModal visible={modalVisibility} />
+        </div>
+      </Switch>
+    </Router>
   );
 }
 
