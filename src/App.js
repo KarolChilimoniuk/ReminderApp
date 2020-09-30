@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Navigation/Navigation";
@@ -9,8 +9,14 @@ import { DoneView as Done } from "./views/DoneView/DoneView";
 import { UndoneView as Undone } from "./views/UndoneView/UndoneView";
 
 function App() {
-  const [allTasks, updateList] = useState([]);
+  const [allTasks, updateList] = useState(JSON.parse(localStorage.getItem("tasks")));
   const [modalVisibility, changeModalVisibility] = useState(false);
+
+  useEffect(() => {
+   console.log(allTasks);
+   updateList(JSON.parse(localStorage.getItem("tasks")));
+   }, []
+  );
 
   return (
     <Router>
@@ -23,7 +29,7 @@ function App() {
           <AddIcon
             onClickHandler={() => changeModalVisibility(!modalVisibility)}
           />
-          <NewTaskModal visible={modalVisibility} />
+          <NewTaskModal tasks={allTasks} visible={modalVisibility}/>
         </div>
       </Switch>
     </Router>

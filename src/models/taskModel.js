@@ -1,12 +1,12 @@
 import { v4 as uuidv4 } from 'uuid';
 
-class Task {
+class NewTaskModel {
     constructor(name, term) {
-        id: uuidv4();
-        name: name;
-        status: 'undone';
-        term: term
+        this.id = uuidv4();
+        this.name = name;
+        this.status = 'undone';
+        this.term = term
     }
 }
 
-export default Task;
+export default NewTaskModel;
