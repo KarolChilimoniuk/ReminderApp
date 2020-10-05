@@ -23,9 +23,9 @@ function App() {
       <Switch>
         <div className="App">
           <Nav />
-          <Route exact path="/" render={() => <Home allTasks={allTasks} />} />
-          <Route path="/done" render={() => <Done allTasks={allTasks} />} />
-          <Route path="/undone" render={() => <Undone allTasks={allTasks} />} />
+          <Route exact path="/" render={() => <Home allTasks={allTasks}/>}/>
+          <Route path="/done" render={() => <Done allTasks={allTasks}/>}/>
+          <Route path="/undone" render={() => <Undone allTasks={allTasks}/>}/>
           <AddIcon
             onClickHandler={() => changeModalVisibility(!modalVisibility)}
           />
