@@ -1,35 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import removeIcon from "../../images/icons/minus 1.png";
 import doneRect from "../../images/icons/doneRect.png";
 import emptyRect from "../../images/icons/emptyRect.png";
 
-const TasksList = ({ allTasks, tasksType }) => {
+const TasksList = ({ tasksType }) => {
+  const [userTasks, updateTasksList] = useState(
+    JSON.parse(localStorage.getItem("tasks"))
+  );
+  useEffect(() => {
+    console.log(userTasks);
+  }, []);
+
   let tasksToShow;
 
   const removeTask = (id) => {
-    let tasks = [...allTasks];
+    let tasks = [...userTasks];
     if (tasks.length - 1 < 1) {
       tasks = null;
     } else {
       tasks = tasks.filter((task) => task.id !== id);
     }
     localStorage.setItem("tasks", JSON.stringify(tasks));
-    console.log(allTasks, id);
+    updateTasksList(tasks);
+    console.log(userTasks, id);
   };
 
   const setStatus = (id) => {
-    let tasks = [...allTasks];
+    let tasks = [...userTasks];
     const task = tasks.find((taskToFind) => taskToFind.id === id);
     task.done = !task.done;
     tasks = tasks.map((el) => (el.id === task.id ? task : el));
     localStorage.setItem("tasks", JSON.stringify(tasks));
-    console.log(allTasks, id);
+    updateTasksList(tasks);
+    console.log(userTasks, id);
   };
 
-  if (allTasks !== null) {
+  if (userTasks !== null) {
     if (tasksType !== "all") {
       return tasksType === "done"
-        ? (tasksToShow = allTasks
+        ? (tasksToShow = userTasks
             .filter((task) => task.done === true)
             .map((taskToShow) => (
               <div>
@@ -46,7 +55,7 @@ const TasksList = ({ allTasks, tasksType }) => {
                 />
               </div>
             )))
-        : (tasksToShow = allTasks
+        : (tasksToShow = userTasks
             .filter((task) => task.done === false)
             .map((taskToShow) => (
               <div>
@@ -64,7 +73,7 @@ const TasksList = ({ allTasks, tasksType }) => {
               </div>
             )));
     } else if (tasksType === "all") {
-      tasksToShow = allTasks.map((taskToShow) =>
+      tasksToShow = userTasks.map((taskToShow) =>
         taskToShow.done === true ? (
           <div>
             <li>{taskToShow.name}</li>
@@ -101,7 +110,7 @@ const TasksList = ({ allTasks, tasksType }) => {
   }
 
   if (tasksToShow !== null) {
-    return <tasksToShow />;
+    return <ul>{tasksToShow}</ul>;
   } else {
     return <li>Brak zadań</li>;
   }

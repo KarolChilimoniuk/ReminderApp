@@ -1,10 +1,10 @@
 import React from "react";
 import TasksList from "../../components/TasksList/TasksList";
 
-export const DoneView = ({ allTasks }) => {
+export const DoneView = () => {
   return (
     <div>
-      <TasksList allTasks={allTasks} tasksType={"done"} />
+      <TasksList tasksType={"done"} />
     </div>
   );
 };

@@ -1,10 +1,10 @@
 import React from "react";
 import TasksList from "../../components/TasksList/TasksList";
 
-export const UndoneView = ({ allTasks }) => {
+export const UndoneView = () => {
   return (
     <div>
-      <TasksList allTasks={allTasks} tasksType={"undone"} />
+      <TasksList tasksType={"undone"} />
     </div>
   );
 };

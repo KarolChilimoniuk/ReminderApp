@@ -1,10 +1,10 @@
 import React from "react";
 import TasksList from "../../components/TasksList/TasksList";
 
-const Home = ({ allTasks }) => {
+const Home = () => {
   return (
     <div>
-      <TasksList allTasks={allTasks} tasksType={"all"} />
+      <TasksList tasksType={"all"} />
     </div>
   );
 };
