@@ -22,7 +22,7 @@ const TasksList = ({ tasksType }) => {
     }
     localStorage.setItem("tasks", JSON.stringify(tasks));
     updateTasksList(tasks);
-    console.log(userTasks, id);
+    console.log(userTasks, id, tasks);
   };
 
   const setStatus = (id) => {
