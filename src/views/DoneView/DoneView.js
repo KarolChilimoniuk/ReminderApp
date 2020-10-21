@@ -3,8 +3,8 @@ import TasksList from "../../components/TasksList/TasksList";
 
 export const DoneView = () => {
   return (
-    <div>
-      <TasksList tasksType={"done"} />
+    <div className="jol">
+        <TasksList tasksType={"done"} />
     </div>
   );
 };

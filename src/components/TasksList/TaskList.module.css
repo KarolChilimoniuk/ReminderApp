@@ -1,0 +1,45 @@
+
+.list {
+    width: 80%;
+    left: 50%;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.listElement {
+    border-radius: 15px;
+    margin-top: 20px;
+    max-width: 100%;
+    padding: 10px;
+}
+
+.listElement:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.listElement:nth-child(even) {
+    background-color: rgba(198, 174, 174, 0.7);
+    max-width: 100%;
+}
+
+.listParagraph {
+    word-wrap: break-word;
+}
+
+.listElementImage {
+    margin-right: 10px;
+}
+
+.paragraph {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    left: 50%;
+    margin: 0;
+    padding: 20px;position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NewTaskModel from "../../../models/taskModel";
+import styles from './NewTaskModal.module.css';
 
 const NewTaskModal = ({ visible }) => {
   const [tasks, updateList] = useState(
@@ -38,24 +39,27 @@ const NewTaskModal = ({ visible }) => {
   };
 
   return visible ? (
-    <>
-      <form
-        onSubmit={() => {
-          alert(`${newTask.name}, ${newTask.finalDate}`);
-        }}
-      >
-        <div>
-          <label htmlFor="taskName">Nazwa zadania</label>
-          <input type="text" id="taskName" onChange={nameHandler} />
-        </div>
-        <div>
-          <label htmlFor="taskDate">Termin na wykonanie zadania</label>
-          <input type="date" id="taskDate" onChange={finalDateHandler} />
-        </div>
-        <input type="submit" value="Dodaj zadanie" onClick={saveNewTask} />
-      </form>
-      <button onClick={() => console.log(newTask)}>stan</button>
-    </>
+    <div className={styles.background}>
+      <div className={styles.form_container}>
+        <form
+          className = {styles.form}
+          onSubmit={() => {
+            alert(`${newTask.name}, ${newTask.finalDate}`);
+          }}
+        >
+          <div className = {styles.form_element}>
+            <label className={styles.label} htmlFor="taskName">Nazwa zadania</label>
+            <input className={styles.input} type="text" id="taskName" onChange={nameHandler} />
+          </div>
+          <div className = {styles.form_element}> 
+            <label className={styles.label} htmlFor="taskDate">Termin</label>
+            <input className={styles.input} type="date" id="taskDate" onChange={finalDateHandler} />
+          </div>
+          <input className={styles.submit} type="submit" value="Dodaj zadanie" onClick={saveNewTask} />
+        </form>
+        <button onClick={() => console.log(newTask)}>stan</button>
+      </div>
+    </div>
   ) : null;
 };
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Navigation/Navigation";
-import Home from "./views/HomeView/HomeView";
+import { Home } from "./views/HomeView/HomeView";
 import AddIcon from "./components/AddTask/AddTask";
 import NewTaskModal from "./components/Modals/NewTaskModal/NewTaskModal";
 import Burger from './components/Burger/Burger';

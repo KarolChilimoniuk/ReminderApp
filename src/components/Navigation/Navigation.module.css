@@ -7,7 +7,7 @@
     flex-direction: row;
     list-style: none;
     margin: 0;
-    padding: 10px 10px 10px 20px;
+    padding: 20px 10px 10px 20px;
 }
 
 .list_link {
@@ -26,13 +26,14 @@
         align-items: center;
         clip-path: polygon(0% 0%, 38% 0, 100% 32%, 58% 100%, 0% 100%);
         display: flex;
-        background-color: rgba(100, 100, 100, 0.7);
+        background-color: rgba(0, 0, 0, 0.8);
         bottom: 0;
         justify-content: center;
         left: 0;
         position: fixed;
         top: 0;
         width: 50%;
+        z-index: 3;
     }
     .navigation {
         align-items: center;

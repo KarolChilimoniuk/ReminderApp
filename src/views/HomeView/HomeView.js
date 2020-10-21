@@ -1,12 +1,12 @@
 import React from "react";
 import TasksList from "../../components/TasksList/TasksList";
 
-const Home = () => {
+export const Home = () => {
   return (
-    <div>
+    <div className="jol">
       <TasksList tasksType={"all"} />
     </div>
   );
 };
 
-export default Home;
+

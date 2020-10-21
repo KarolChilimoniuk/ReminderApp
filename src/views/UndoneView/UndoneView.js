@@ -3,8 +3,8 @@ import TasksList from "../../components/TasksList/TasksList";
 
 export const UndoneView = () => {
   return (
-    <div>
-      <TasksList tasksType={"undone"} />
-    </div>
+      <div className="jol">
+          <TasksList tasksType={"undone"} />
+      </div>
   );
 };
