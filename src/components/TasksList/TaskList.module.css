@@ -1,4 +1,3 @@
-
 .list {
     width: 80%;
     left: 50%;
@@ -30,6 +29,7 @@
 }
 
 .listElementImage {
+    cursor: pointer;
     margin-right: 10px;
 }
 
@@ -38,7 +38,8 @@
     border-radius: 15px;
     left: 50%;
     margin: 0;
-    padding: 20px;position: absolute;
+    padding: 20px;
+    position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 200px;

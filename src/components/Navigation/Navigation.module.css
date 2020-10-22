@@ -14,11 +14,30 @@
     color: rgb(255, 255, 255);
     cursor: pointer;
     text-decoration: none;
-    margin-right: 20px;
+    margin-right: 40px;
+    position: relative;
+    transition: color 0.4s 0.1s ease;
 }
 
 .list_link:focus {
-    color: rgb(150,150,150);
+    color: rgb(150, 150, 150);
+}
+
+.list_link::before {
+    background-color: rgb(150, 150, 150);
+    bottom: -5px;
+    visibility: hidden;
+    content: "";
+    height: 2px;
+    left: -40px;
+    position: absolute;
+    transition: visibility 0.3s ease, left 0.3s ease;
+    width: 100%;
+}
+
+.list_link:hover::before {
+    left: 0;
+    visibility: visible;
 }
 
 @media(max-width: 1023px) {
@@ -33,31 +52,38 @@
         position: fixed;
         top: 0;
         width: 50%;
+        transition: left 0.4s 0.1s ease;
         z-index: 3;
     }
+
     .navigation {
         align-items: center;
         clip-path: polygon(0% 0%, 38% 0, 100% 32%, 58% 100%, 0% 100%);
         display: flex;
-        background-color: rgba(100, 100, 100, 0.7);
+        background-color: rgba(0, 0, 0, 0.8);
         bottom: 0;
         justify-content: center;
         left: -120%;
         position: fixed;
         top: 0;
+        transition: left 0.4s 0.1s ease;
         width: 50%;
+        z-index: 3;
     }
+
     .list {
         flex-direction: column;
     }
+
     .list_element {
         margin-bottom: 20px;
     }
+
     .list_link {
         opacity: 100;
     }
+
     .list_link:focus {
-        color: rgb(0,0,0);
+        color: rgb(150, 150, 150);
     }
 }
-
