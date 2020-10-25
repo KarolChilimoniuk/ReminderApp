@@ -1,7 +1,14 @@
 .add_icon {
     cursor: pointer;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 5%;
+    right: 5%;
     z-index: 3;
+}
+
+@media(max-width: 1023px) {
+    .add_icon {
+        top: 20px;
+        right: 20px;
+    }
 }

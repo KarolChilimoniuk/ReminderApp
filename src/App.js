@@ -5,22 +5,28 @@ import Nav from "./components/Navigation/Navigation";
 import { Home } from "./views/HomeView/HomeView";
 import AddIcon from "./components/AddTask/AddTask";
 import NewTaskModal from "./components/Modals/NewTaskModal/NewTaskModal";
-import Burger from './components/Burger/Burger';
+import Burger from "./components/Burger/Burger";
 import { DoneView as Done } from "./views/DoneView/DoneView";
 import { UndoneView as Undone } from "./views/UndoneView/UndoneView";
+import Footer from "./components/Footer/Footer";
 
 function App() {
-
   const [modalVisibility, changeModalVisibility] = useState(false);
-  const [mobileNavStatus, handleMobileNavStatus] = useState('default');
+  const [mobileNavStatus, handleMobileNavStatus] = useState("default");
 
   return (
     <Router>
       <Switch>
         <div className="App">
-          <header class="header">
-            <Burger mobileNavStatusHandler={() => handleMobileNavStatus(prevStatus => mobileNavStatus === "default" ? "active" : "default")}/>
-            <Nav mobileNav={mobileNavStatus}/>
+          <header className="header">
+            <Burger
+              mobileNavStatusHandler={() =>
+                handleMobileNavStatus((prevStatus) =>
+                  mobileNavStatus === "default" ? "active" : "default"
+                )
+              }
+            />
+            <Nav mobileNav={mobileNavStatus} />
           </header>
           <Route exact path="/" render={() => <Home />} />
           <Route path="/done" render={() => <Done />} />
@@ -29,6 +35,7 @@ function App() {
             onClickHandler={() => changeModalVisibility(!modalVisibility)}
           />
           <NewTaskModal visible={modalVisibility} />
+          <Footer />
         </div>
       </Switch>
     </Router>

@@ -4,11 +4,16 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
   font-family: 'Nova Mono', monospace;
+  justify-content: center;
+  letter-spacing: 2px;
   min-height: 100vh;
+  overflow: hidden;
   position: relative;
   text-align: center;
-  width: 100vw;
+  width: 100%;
 }
 
 @keyframes App-logo-spin {

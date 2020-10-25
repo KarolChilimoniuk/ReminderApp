@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import NewTaskModel from "../../../models/taskModel";
 import styles from "./NewTaskModal.module.css";
 
 const NewTaskModal = ({ visible }) => {
-  const [tasks, updateList] = useState(
-    JSON.parse(localStorage.getItem("tasks"))
-  );
-  useEffect(() => {
-    console.log(tasks);
-  }, []);
+  const [tasks] = useState(JSON.parse(localStorage.getItem("tasks")));
 
   let [newTask, newTaskData] = useState({
     name: "",
@@ -44,7 +39,9 @@ const NewTaskModal = ({ visible }) => {
         <form
           className={styles.form}
           onSubmit={() => {
-            alert(`${newTask.name}, ${newTask.finalDate}`);
+            alert(
+              `Dodałeś nowe zadanie: ${newTask.name}, ${newTask.finalDate}`
+            );
           }}
         >
           <div className={styles.form_element}>

@@ -48,6 +48,4 @@
     .activeBurger::after {
         transform: rotateZ(45deg);
     }
-
-
 }

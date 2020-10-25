@@ -1,11 +1,8 @@
 .list {
-    width: 80%;
-    left: 50%;
+    margin-top: 100px;
     list-style: none;
     padding: 0;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    width: 80%;
 }
 
 .listElement {
@@ -43,4 +40,18 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 200px;
+}
+
+.span {
+    text-transform: uppercase;
+}
+
+@media(max-width: 1023px) {
+    .listParagraph {
+        font-size: 0.9rem
+    }
+    
+    .span {
+        font-size: 0.9rem
+    }
 }
