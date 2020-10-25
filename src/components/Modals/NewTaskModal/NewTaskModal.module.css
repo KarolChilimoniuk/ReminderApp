@@ -46,6 +46,11 @@
     text-transform: uppercase;
 }
 
+.image {
+    align-self: flex-end;
+    width: 50px;
+}
+
 .input {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
@@ -81,6 +86,10 @@
     .form_container {
         min-height: 220px;
         min-width: 230px;
+    }
+
+    .image {
+        width: 30px;
     }
 
     .label {

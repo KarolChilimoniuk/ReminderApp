@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import NewTaskModel from "../../../models/taskModel";
+import Cross from "../../../images/icons/error.svg";
 import styles from "./NewTaskModal.module.css";
 
-const NewTaskModal = ({ visible }) => {
+const NewTaskModal = ({ visible, onClickHandler }) => {
   const [tasks] = useState(JSON.parse(localStorage.getItem("tasks")));
 
   let [newTask, newTaskData] = useState({
@@ -37,6 +38,12 @@ const NewTaskModal = ({ visible }) => {
   return visible ? (
     <div className={styles.background}>
       <div className={styles.form_container}>
+        <img
+          className={styles.image}
+          src={Cross}
+          alt="close"
+          onClick={onClickHandler}
+        />
         <form
           className={styles.form}
           onSubmit={() => {

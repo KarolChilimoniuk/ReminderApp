@@ -40,7 +40,10 @@ function App() {
           <AddIcon
             onClickHandler={() => changeModalVisibility(!modalVisibility)}
           />
-          <NewTaskModal visible={modalVisibility} />
+          <NewTaskModal
+            visible={modalVisibility}
+            onClickHandler={() => changeModalVisibility(!modalVisibility)}
+          />
           <Footer />
         </div>
       </Switch>
