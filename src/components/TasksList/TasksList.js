@@ -41,22 +41,22 @@ const TasksList = ({ tasksType }) => {
               return new Date(a.term) - new Date(b.term);
             })
             .map((taskToShow) => (
-              <li className={styles.listElement} key={taskToShow.id}>
-                <h3 className={styles.listParagraph}>
+              <li className={styles.list_element_done} key={taskToShow.id}>
+                <h3 className={styles.list_paragraph}>
                   Zadanie:{" "}
                   <span className={styles.span}>{taskToShow.name}</span>
                 </h3>
-                <h3 className={styles.listParagraph}>
+                <h3 className={styles.list_paragraph}>
                   Termin: <span className={styles.span}>{taskToShow.term}</span>
                 </h3>
                 <img
-                  className={styles.listElementImage}
+                  className={styles.list_element_image}
                   src={removeIcon}
                   alt="remove task"
                   onClick={() => removeTask(taskToShow.id)}
                 />
                 <img
-                  className={styles.listElementImage}
+                  className={styles.list_element_image}
                   src={doneRect}
                   alt="done task"
                   onClick={() => setStatus(taskToShow.id)}
@@ -69,22 +69,22 @@ const TasksList = ({ tasksType }) => {
               return new Date(a.term) - new Date(b.term);
             })
             .map((taskToShow) => (
-              <li className={styles.listElement} key={taskToShow.id}>
-                <h3 className={styles.listParagraph}>
+              <li className={styles.list_element} key={taskToShow.id}>
+                <h3 className={styles.list_paragraph}>
                   Zadanie:{" "}
                   <span className={styles.span}>{taskToShow.name}</span>
                 </h3>
-                <h3 className={styles.listParagraph}>
+                <h3 className={styles.list_paragraph}>
                   Termin: <span className={styles.span}>{taskToShow.term}</span>
                 </h3>
                 <img
-                  className={styles.listElementImage}
+                  className={styles.list_element_image}
                   src={removeIcon}
                   alt="remove task"
                   onClick={() => removeTask(taskToShow.id)}
                 />
                 <img
-                  className={styles.listElementImage}
+                  className={styles.list_element_image}
                   src={emptyRect}
                   alt="not done"
                   onClick={() => setStatus(taskToShow.id)}
@@ -98,42 +98,42 @@ const TasksList = ({ tasksType }) => {
         })
         .map((taskToShow) =>
           taskToShow.done === true ? (
-            <li className={styles.listElement} key={taskToShow.id}>
-              <h3 className={styles.listParagraph}>
+            <li className={styles.list_element_done} key={taskToShow.id}>
+              <h3 className={styles.list_paragraph}>
                 Zadanie: <span className={styles.span}>{taskToShow.name}</span>
               </h3>
-              <h3 className={styles.listParagraph}>
+              <h3 className={styles.list_paragraph}>
                 Termin: <span className={styles.span}>{taskToShow.term}</span>
               </h3>
               <img
-                className={styles.listElementImage}
+                className={styles.list_element_image}
                 src={removeIcon}
                 alt="remove task"
                 onClick={() => removeTask(taskToShow.id)}
               />
               <img
-                className={styles.listElementImage}
+                className={styles.list_element_image}
                 src={doneRect}
                 alt="done task"
                 onClick={() => setStatus(taskToShow.id)}
               />
             </li>
           ) : (
-            <li className={styles.listElement} key={taskToShow.id}>
-              <h3 className={styles.listParagraph}>
+            <li className={styles.list_element} key={taskToShow.id}>
+              <h3 className={styles.list_paragraph}>
                 Zadanie: <span className={styles.span}>{taskToShow.name}</span>
               </h3>
-              <h3 className={styles.listParagraph}>
+              <h3 className={styles.list_paragraph}>
                 Termin: <span className={styles.span}>{taskToShow.term}</span>
               </h3>
               <img
-                className={styles.listElementImage}
+                className={styles.list_element_image}
                 src={removeIcon}
                 alt="remove task"
                 onClick={() => removeTask(taskToShow.id)}
               />
               <img
-                className={styles.listElementImage}
+                className={styles.list_element_image}
                 src={emptyRect}
                 alt="not done"
                 onClick={() => setStatus(taskToShow.id)}

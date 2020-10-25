@@ -1,6 +1,7 @@
 @media(max-width: 1023px) {
     .burger {
         border-top: solid 5px #fff;
+        cursor: pointer;
         height: 40px;
         margin: 20px 0 0 20px;
         position: fixed;
@@ -25,6 +26,7 @@
     }
 
     .activeBurger {
+        cursor: pointer;
         height: 40px;
         margin: 20px 0 0 20px;
         position: fixed;

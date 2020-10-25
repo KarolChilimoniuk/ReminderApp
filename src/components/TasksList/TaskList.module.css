@@ -5,27 +5,35 @@
     width: 80%;
 }
 
-.listElement {
+.list_element {
     border-radius: 15px;
     margin-top: 20px;
     max-width: 100%;
     padding: 10px;
 }
 
-.listElement:nth-child(odd) {
+.list_element_done {
+    border-radius: 15px;
+    margin-top: 20px;
+    max-width: 100%;
+    opacity: 0.5;
+    padding: 10px;
+}
+
+.list_element:nth-child(odd), .list_element_done:nth-child(odd) {
     background-color: rgba(255, 255, 255, 0.7);
 }
 
-.listElement:nth-child(even) {
+.list_element:nth-child(even), .list_element_done:nth-child(even) {
     background-color: rgba(198, 174, 174, 0.7);
     max-width: 100%;
 }
 
-.listParagraph {
+.list_paragraph {
     word-wrap: break-word;
 }
 
-.listElementImage {
+.list_element_image {
     cursor: pointer;
     margin-right: 10px;
 }
@@ -47,7 +55,7 @@
 }
 
 @media(max-width: 1023px) {
-    .listParagraph {
+    .list_paragraph {
         font-size: 0.9rem
     }
     
