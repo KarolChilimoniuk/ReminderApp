@@ -11,16 +11,15 @@ const TasksList = ({ tasksType }) => {
 
   let tasksToShow;
 
-  const removeTask = (id) => {
+  const removeTask = async (id) => {
     let tasks = [...userTasks];
     if (tasks.length - 1 < 1) {
-      tasks = null;
+      tasks = [];
     } else {
       tasks = tasks.filter((task) => task.id !== id);
     }
     localStorage.setItem("tasks", JSON.stringify(tasks));
-    updateTasksList(tasks);
-    console.log(userTasks, id, tasks);
+    updateTasksList(() => tasks);
   };
 
   const setStatus = (id) => {
@@ -33,7 +32,7 @@ const TasksList = ({ tasksType }) => {
     console.log(userTasks, id);
   };
 
-  if (userTasks !== null) {
+  if (userTasks.length !== 0) {
     if (tasksType !== "all") {
       tasksType === "done"
         ? (tasksToShow = userTasks

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NewTaskModel from "../../../models/taskModel";
 import styles from "./NewTaskModal.module.css";
 
@@ -9,6 +9,10 @@ const NewTaskModal = ({ visible }) => {
     name: "",
     finalDate: "",
   });
+
+  useEffect(() => {
+    console.log(tasks);
+  }, []);
 
   const nameHandler = (e) => {
     newTaskData({
@@ -25,9 +29,6 @@ const NewTaskModal = ({ visible }) => {
   };
 
   const saveNewTask = () => {
-    if (tasks === null) {
-      localStorage.setItem("tasks", JSON.stringify([]));
-    }
     const newTasksContainer = JSON.parse(localStorage.getItem("tasks"));
     newTasksContainer.push(new NewTaskModel(newTask.name, newTask.finalDate));
     localStorage.setItem("tasks", JSON.stringify(newTasksContainer));
@@ -40,7 +41,7 @@ const NewTaskModal = ({ visible }) => {
           className={styles.form}
           onSubmit={() => {
             alert(
-              `Dodałeś nowe zadanie: ${newTask.name}, ${newTask.finalDate}`
+              `Dodałeś nowe zadanie: ${newTask.name}, \nTermin: ${newTask.finalDate}`
             );
           }}
         >

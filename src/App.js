@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Navigation/Navigation";
@@ -13,6 +13,12 @@ import Footer from "./components/Footer/Footer";
 function App() {
   const [modalVisibility, changeModalVisibility] = useState(false);
   const [mobileNavStatus, handleMobileNavStatus] = useState("default");
+
+  useEffect(() => {
+    if (JSON.parse(localStorage.getItem("tasks")) === null) {
+      localStorage.setItem("tasks", JSON.stringify([]));
+    }
+  }, []);
 
   return (
     <Router>
