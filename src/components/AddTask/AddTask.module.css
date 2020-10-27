@@ -3,6 +3,7 @@
     position: absolute;
     top: 5%;
     right: 5%;
+    width: 50px;
     z-index: 2;
 }
 

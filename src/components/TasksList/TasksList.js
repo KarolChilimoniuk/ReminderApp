@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import removeIcon from "../../images/icons/minus 1.png";
-import doneRect from "../../images/icons/doneRect.png";
-import emptyRect from "../../images/icons/emptyRect.png";
+import removeIcon from "../../images/icons/delete.svg";
+import doneRect from "../../images/icons/check.svg";
+import emptyRect from "../../images/icons/undone.svg";
 import styles from "./TaskList.module.css";
 
 const TasksList = ({ tasksType }) => {
