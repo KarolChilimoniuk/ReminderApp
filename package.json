@@ -4,8 +4,6 @@
   "private": true,
   "dependencies": {
     "homepage": "https://karolchilimoniuk.github.io/ReminderApp/.",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
     "-": "0.0.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -20,6 +18,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
