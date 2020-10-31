@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import styles from "./Burger.module.css";
 
 const Burger = ({ mobileNavStatusHandler }) => {
@@ -32,6 +33,10 @@ const Burger = ({ mobileNavStatusHandler }) => {
       ></div>
     );
   }
+};
+
+Burger.propTypes = {
+  mobileNavStatusHandler: PropTypes.func,
 };
 
 export default Burger;

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import NewTaskModel from "../../../models/taskModel";
 import Cross from "../../../images/icons/error.svg";
 import styles from "./NewTaskModal.module.css";
@@ -10,10 +11,6 @@ const NewTaskModal = ({ visible, onClickHandler }) => {
     name: "",
     finalDate: "",
   });
-
-  useEffect(() => {
-    console.log(tasks);
-  }, []);
 
   const nameHandler = (e) => {
     newTaskData({
@@ -85,6 +82,11 @@ const NewTaskModal = ({ visible, onClickHandler }) => {
       </div>
     </div>
   ) : null;
+};
+
+NewTaskModal.propTypes = {
+  visible: PropTypes.bool,
+  onClickHandler: PropTypes.func,
 };
 
 export default NewTaskModal;

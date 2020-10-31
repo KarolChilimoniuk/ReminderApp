@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./Navigation.module.css";
 
@@ -30,4 +31,7 @@ const Navigation = ({ mobileNav }) => {
   );
 };
 
+Navigation.propTypes = {
+  mobileNav: PropTypes.string,
+};
 export default Navigation;

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import removeIcon from "../../images/icons/delete.svg";
 import doneRect from "../../images/icons/check.svg";
 import emptyRect from "../../images/icons/undone.svg";
@@ -32,7 +33,7 @@ const TasksList = ({ tasksType }) => {
     console.log(userTasks, id);
   };
 
-  if (userTasks.length !== 0) {
+  if (userTasks !== null && userTasks.length !== 0) {
     if (tasksType !== "all") {
       tasksType === "done"
         ? (tasksToShow = userTasks
@@ -151,5 +152,9 @@ const TasksList = ({ tasksType }) => {
   } else {
     return <h3 className={styles.paragraph}>Brak zadań</h3>;
   }
+};
+
+TasksList.propTypes = {
+  tasksType: PropTypes.string,
 };
 export default TasksList;
