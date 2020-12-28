@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.5646360f.chunk.css",
-    "main.js": "/static/js/main.9bb4cdd3.chunk.js",
-    "main.js.map": "/static/js/main.9bb4cdd3.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.025be44c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.025be44c.js.map",
-    "static/js/2.01830e90.chunk.js": "/static/js/2.01830e90.chunk.js",
-    "static/js/2.01830e90.chunk.js.map": "/static/js/2.01830e90.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.eba61c42d24e147964476a73ef45e958.js": "/precache-manifest.eba61c42d24e147964476a73ef45e958.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.5646360f.chunk.css.map": "/static/css/main.5646360f.chunk.css.map",
-    "static/js/2.01830e90.chunk.js.LICENSE.txt": "/static/js/2.01830e90.chunk.js.LICENSE.txt",
-    "static/media/add.svg": "/static/media/add.f93faf49.svg",
-    "static/media/check.svg": "/static/media/check.0c141b91.svg",
-    "static/media/delete.svg": "/static/media/delete.665926e2.svg",
-    "static/media/error.svg": "/static/media/error.49cbfff0.svg",
-    "static/media/App.css": "/static/media/idea.3b58b610.jpg",
-    "static/media/undone.svg": "/static/media/undone.68635bea.svg"
+    "main.css": "/ReminderApp/static/css/main.01798010.chunk.css",
+    "main.js": "/ReminderApp/static/js/main.742d4b84.chunk.js",
+    "main.js.map": "/ReminderApp/static/js/main.742d4b84.chunk.js.map",
+    "runtime-main.js": "/ReminderApp/static/js/runtime-main.4feae187.js",
+    "runtime-main.js.map": "/ReminderApp/static/js/runtime-main.4feae187.js.map",
+    "static/js/2.178eb71b.chunk.js": "/ReminderApp/static/js/2.178eb71b.chunk.js",
+    "static/js/2.178eb71b.chunk.js.map": "/ReminderApp/static/js/2.178eb71b.chunk.js.map",
+    "index.html": "/ReminderApp/index.html",
+    "precache-manifest.b636382b469b6e0f25af4c89d147b8c6.js": "/ReminderApp/precache-manifest.b636382b469b6e0f25af4c89d147b8c6.js",
+    "service-worker.js": "/ReminderApp/service-worker.js",
+    "static/css/main.01798010.chunk.css.map": "/ReminderApp/static/css/main.01798010.chunk.css.map",
+    "static/js/2.178eb71b.chunk.js.LICENSE.txt": "/ReminderApp/static/js/2.178eb71b.chunk.js.LICENSE.txt",
+    "static/media/add.svg": "/ReminderApp/static/media/add.f93faf49.svg",
+    "static/media/check.svg": "/ReminderApp/static/media/check.0c141b91.svg",
+    "static/media/delete.svg": "/ReminderApp/static/media/delete.665926e2.svg",
+    "static/media/error.svg": "/ReminderApp/static/media/error.49cbfff0.svg",
+    "static/media/App.css": "/ReminderApp/static/media/idea.3b58b610.jpg",
+    "static/media/undone.svg": "/ReminderApp/static/media/undone.68635bea.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.025be44c.js",
-    "static/js/2.01830e90.chunk.js",
-    "static/css/main.5646360f.chunk.css",
-    "static/js/main.9bb4cdd3.chunk.js"
+    "static/js/runtime-main.4feae187.js",
+    "static/js/2.178eb71b.chunk.js",
+    "static/css/main.01798010.chunk.css",
+    "static/js/main.742d4b84.chunk.js"
   ]
 }
