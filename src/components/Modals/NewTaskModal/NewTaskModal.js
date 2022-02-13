@@ -56,6 +56,10 @@ const NewTaskModal = ({ visible, onClickHandler }) => {
               alert(`Dodałeś nowe zadanie: ${newTask.name}, \nTermin: ${newTask.finalDate}`);
               history.push('/undone');
               onClickHandler();
+              newTaskData({
+                name: "",
+                finalDate: "",
+              });
             }
           }}
         >
@@ -69,6 +73,7 @@ const NewTaskModal = ({ visible, onClickHandler }) => {
               id="taskName"
               onChange={nameHandler}
               placeholder="Zadanie"
+              value={newTask.name}
             />
           </div>
           <div className={styles.form_element}>
