@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import {useHistory} from "react-router-dom";
 import PropTypes from "prop-types";
 import NewTaskModel from "../../../models/taskModel";
 import Cross from "../../../images/icons/error.svg";
 import styles from "./NewTaskModal.module.css";
 
 const NewTaskModal = ({ visible, onClickHandler }) => {
+
+  const history = useHistory();
   const [tasks] = useState(JSON.parse(localStorage.getItem("tasks")));
 
   let [newTask, newTaskData] = useState({
@@ -33,7 +36,7 @@ const NewTaskModal = ({ visible, onClickHandler }) => {
       newTasksContainer.push(new NewTaskModel(newTask.name, newTask.finalDate));
       localStorage.setItem("tasks", JSON.stringify(newTasksContainer));
     } else {
-      alert('Set task name and final date!');
+      alert("Set task name and final date!");
     }
   };
 
@@ -49,9 +52,11 @@ const NewTaskModal = ({ visible, onClickHandler }) => {
         <form
           className={styles.form}
           onSubmit={() => {
-            (newTask.finalDate !== "" && newTask.name !== "") && alert(
-              `Dodałeś nowe zadanie: ${newTask.name}, \nTermin: ${newTask.finalDate}`
-            );
+            if(newTask.finalDate !== "" && newTask.name !== "") {
+              alert(`Dodałeś nowe zadanie: ${newTask.name}, \nTermin: ${newTask.finalDate}`);
+              history.push('/undone');
+              onClickHandler();
+            }
           }}
         >
           <div className={styles.form_element}>

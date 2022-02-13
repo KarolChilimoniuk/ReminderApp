@@ -150,7 +150,7 @@ const TasksList = ({ tasksType }) => {
   if (tasksToShow !== null) {
     return <ul className={styles.list}>{tasksToShow}</ul>;
   } else {
-    return <h3 className={styles.paragraph}>Brak zadań</h3>;
+    return <h3 className={styles.paragraph}>Task list is empty</h3>;
   }
 };
 
