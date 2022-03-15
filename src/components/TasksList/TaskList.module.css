@@ -21,20 +21,20 @@
 }
 
 .list_element:nth-child(odd), .list_element_done:nth-child(odd) {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .list_element:nth-child(even) {
-    background-color: rgba(198, 174, 174, 0.8);
+    background-color: rgba(198, 174, 174, 0.9);
     max-width: 100%;
 }
 
 .list_element_done:nth-child(odd) {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .list_element_done:nth-child(even) {
-    background-color: rgba(198, 174, 174, 0.5);
+    background-color: rgba(198, 174, 174, 0.9);
     max-width: 100%;
 }
 

@@ -8,7 +8,6 @@ import styles from "./NewTaskModal.module.css";
 const NewTaskModal = ({ visible, onClickHandler }) => {
 
   const history = useHistory();
-  const [tasks] = useState(JSON.parse(localStorage.getItem("tasks")));
 
   let [newTask, newTaskData] = useState({
     name: "",
