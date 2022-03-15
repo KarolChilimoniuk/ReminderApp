@@ -12,7 +12,7 @@ export const Home = () => {
           name='description'
           content='Reminder app coded by Karol Chilimoniuk with React and other technologies'
         />
-        <link rel='canonical' href='/home' />
+        <link rel='canonical' href='/' />
       </Helmet>
       <section className={styles.home_view}>
         <TasksList tasksType={"all"} />
