@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/ReminderApp/static/css/main.672e48fa.chunk.css",
-    "main.js": "/ReminderApp/static/js/main.02c2e8b5.chunk.js",
-    "main.js.map": "/ReminderApp/static/js/main.02c2e8b5.chunk.js.map",
+    "main.css": "/ReminderApp/static/css/main.179b7737.chunk.css",
+    "main.js": "/ReminderApp/static/js/main.0c56919e.chunk.js",
+    "main.js.map": "/ReminderApp/static/js/main.0c56919e.chunk.js.map",
     "runtime-main.js": "/ReminderApp/static/js/runtime-main.4feae187.js",
     "runtime-main.js.map": "/ReminderApp/static/js/runtime-main.4feae187.js.map",
-    "static/js/2.302dfc6f.chunk.js": "/ReminderApp/static/js/2.302dfc6f.chunk.js",
-    "static/js/2.302dfc6f.chunk.js.map": "/ReminderApp/static/js/2.302dfc6f.chunk.js.map",
+    "static/js/2.888f73cd.chunk.js": "/ReminderApp/static/js/2.888f73cd.chunk.js",
+    "static/js/2.888f73cd.chunk.js.map": "/ReminderApp/static/js/2.888f73cd.chunk.js.map",
     "index.html": "/ReminderApp/index.html",
-    "precache-manifest.d9ae174b589f73dd4280b90125888406.js": "/ReminderApp/precache-manifest.d9ae174b589f73dd4280b90125888406.js",
+    "precache-manifest.e51525860bdf219f11136fc79967f393.js": "/ReminderApp/precache-manifest.e51525860bdf219f11136fc79967f393.js",
     "service-worker.js": "/ReminderApp/service-worker.js",
-    "static/css/main.672e48fa.chunk.css.map": "/ReminderApp/static/css/main.672e48fa.chunk.css.map",
-    "static/js/2.302dfc6f.chunk.js.LICENSE.txt": "/ReminderApp/static/js/2.302dfc6f.chunk.js.LICENSE.txt",
+    "static/css/main.179b7737.chunk.css.map": "/ReminderApp/static/css/main.179b7737.chunk.css.map",
+    "static/js/2.888f73cd.chunk.js.LICENSE.txt": "/ReminderApp/static/js/2.888f73cd.chunk.js.LICENSE.txt",
     "static/media/add.svg": "/ReminderApp/static/media/add.f93faf49.svg",
     "static/media/check.svg": "/ReminderApp/static/media/check.0c141b91.svg",
     "static/media/delete.svg": "/ReminderApp/static/media/delete.665926e2.svg",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.4feae187.js",
-    "static/js/2.302dfc6f.chunk.js",
-    "static/css/main.672e48fa.chunk.css",
-    "static/js/main.02c2e8b5.chunk.js"
+    "static/js/2.888f73cd.chunk.js",
+    "static/css/main.179b7737.chunk.css",
+    "static/js/main.0c56919e.chunk.js"
   ]
 }
