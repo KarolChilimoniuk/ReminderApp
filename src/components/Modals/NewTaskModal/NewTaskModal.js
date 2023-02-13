@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import { useHistory } from "react-router-dom";
+=======
+>>>>>>> b9bad0a31c0e7e3e8803982ed09a6fc5a21a7228
 import PropTypes from "prop-types";
+import {useHistory} from "react-router-dom";
 import NewTaskModel from "../../../models/taskModel";
 import Cross from "../../../images/icons/error.svg";
 import styles from "./NewTaskModal.module.css";
 
 const NewTaskModal = ({ visible, onClickHandler }) => {
   const history = useHistory();
-  const [tasks] = useState(JSON.parse(localStorage.getItem("tasks")));
 
   let [newTask, newTaskData] = useState({
     name: "",
@@ -51,11 +54,17 @@ const NewTaskModal = ({ visible, onClickHandler }) => {
         <form
           className={styles.form}
           onSubmit={() => {
+<<<<<<< HEAD
             if (newTask.finalDate !== "" && newTask.name !== "") {
               alert(
                 `New task is added: ${newTask.name}, \nFinal date: ${newTask.finalDate}`
               );
               history.push("/undone");
+=======
+            if(newTask.finalDate !== "" && newTask.name !== "") {
+              alert(`Added new task: ${newTask.name}, \nDeadline: ${newTask.finalDate}`);
+              history.push('/undone');
+>>>>>>> b9bad0a31c0e7e3e8803982ed09a6fc5a21a7228
               onClickHandler();
               newTaskData({
                 name: "",
@@ -73,8 +82,12 @@ const NewTaskModal = ({ visible, onClickHandler }) => {
               type="text"
               id="taskName"
               onChange={nameHandler}
+<<<<<<< HEAD
               placeholder="Task name"
               value={newTask.name}
+=======
+              placeholder="Zadanie"
+>>>>>>> b9bad0a31c0e7e3e8803982ed09a6fc5a21a7228
             />
           </div>
           <div className={styles.form_element}>
