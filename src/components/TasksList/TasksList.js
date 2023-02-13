@@ -72,11 +72,11 @@ const TasksList = ({ tasksType }) => {
             .map((taskToShow) => (
               <li className={styles.list_element} key={taskToShow.id}>
                 <h3 className={styles.list_paragraph}>
-                  Zadanie:{" "}
-                  <span className={styles.span}>{taskToShow.name}</span>
+                  Task: <span className={styles.span}>{taskToShow.name}</span>
                 </h3>
                 <h3 className={styles.list_paragraph}>
-                  Termin: <span className={styles.span}>{taskToShow.term}</span>
+                  Final date:{" "}
+                  <span className={styles.span}>{taskToShow.term}</span>
                 </h3>
                 <img
                   className={styles.list_element_image}
@@ -101,10 +101,11 @@ const TasksList = ({ tasksType }) => {
           taskToShow.done === true ? (
             <li className={styles.list_element_done} key={taskToShow.id}>
               <h3 className={styles.list_paragraph}>
-                Zadanie: <span className={styles.span}>{taskToShow.name}</span>
+                Task: <span className={styles.span}>{taskToShow.name}</span>
               </h3>
               <h3 className={styles.list_paragraph}>
-                Termin: <span className={styles.span}>{taskToShow.term}</span>
+                Final date:{" "}
+                <span className={styles.span}>{taskToShow.term}</span>
               </h3>
               <img
                 className={styles.list_element_image}
@@ -122,10 +123,11 @@ const TasksList = ({ tasksType }) => {
           ) : (
             <li className={styles.list_element} key={taskToShow.id}>
               <h3 className={styles.list_paragraph}>
-                Zadanie: <span className={styles.span}>{taskToShow.name}</span>
+                Task: <span className={styles.span}>{taskToShow.name}</span>
               </h3>
               <h3 className={styles.list_paragraph}>
-                Termin: <span className={styles.span}>{taskToShow.term}</span>
+                Final date:{" "}
+                <span className={styles.span}>{taskToShow.term}</span>
               </h3>
               <img
                 className={styles.list_element_image}

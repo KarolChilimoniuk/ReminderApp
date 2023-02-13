@@ -6,7 +6,6 @@ const Footer = () => {
     <footer className={styles.footer}>
       <p className={styles.paragraph}>By Karol Chilimoniuk</p>
       <p className={styles.paragraph}>webdevkarolchilimoniuk@gmail.com</p>
-      <p className={styles.paragraph}>2020</p>
     </footer>
   );
 };

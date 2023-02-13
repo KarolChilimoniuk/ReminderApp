@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import NewTaskModel from "../../../models/taskModel";
 import Cross from "../../../images/icons/error.svg";
 import styles from "./NewTaskModal.module.css";
 
 const NewTaskModal = ({ visible, onClickHandler }) => {
-
   const history = useHistory();
   const [tasks] = useState(JSON.parse(localStorage.getItem("tasks")));
 
@@ -31,7 +30,7 @@ const NewTaskModal = ({ visible, onClickHandler }) => {
   };
 
   const saveNewTask = () => {
-    if(newTask.finalDate !== "" && newTask.name !== "") {
+    if (newTask.finalDate !== "" && newTask.name !== "") {
       const newTasksContainer = JSON.parse(localStorage.getItem("tasks"));
       newTasksContainer.push(new NewTaskModel(newTask.name, newTask.finalDate));
       localStorage.setItem("tasks", JSON.stringify(newTasksContainer));
@@ -52,9 +51,11 @@ const NewTaskModal = ({ visible, onClickHandler }) => {
         <form
           className={styles.form}
           onSubmit={() => {
-            if(newTask.finalDate !== "" && newTask.name !== "") {
-              alert(`Dodałeś nowe zadanie: ${newTask.name}, \nTermin: ${newTask.finalDate}`);
-              history.push('/undone');
+            if (newTask.finalDate !== "" && newTask.name !== "") {
+              alert(
+                `New task is added: ${newTask.name}, \nFinal date: ${newTask.finalDate}`
+              );
+              history.push("/undone");
               onClickHandler();
               newTaskData({
                 name: "",
@@ -65,20 +66,20 @@ const NewTaskModal = ({ visible, onClickHandler }) => {
         >
           <div className={styles.form_element}>
             <label className={styles.label} htmlFor="taskName">
-              Nazwa zadania
+              Task name
             </label>
             <input
               className={styles.input}
               type="text"
               id="taskName"
               onChange={nameHandler}
-              placeholder="Zadanie"
+              placeholder="Task name"
               value={newTask.name}
             />
           </div>
           <div className={styles.form_element}>
             <label className={styles.label} htmlFor="taskDate">
-              Termin
+              Final date
             </label>
             <input
               className={styles.input}
@@ -90,7 +91,7 @@ const NewTaskModal = ({ visible, onClickHandler }) => {
           <input
             className={styles.submit}
             type="submit"
-            value="Dodaj zadanie"
+            value="Add task"
             onClick={saveNewTask}
           />
         </form>
