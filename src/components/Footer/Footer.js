@@ -4,8 +4,10 @@ import styles from "./Footer.module.css";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <p className={styles.paragraph}>By Karol Chilimoniuk</p>
-      <p className={styles.paragraph}>webdevkarolchilimoniuk@gmail.com</p>
+      <p className={styles.footer__paragraph}>By Karol Chilimoniuk</p>
+      <p className={styles.footer__paragraph}>
+        webdevkarolchilimoniuk@gmail.com
+      </p>
     </footer>
   );
 };

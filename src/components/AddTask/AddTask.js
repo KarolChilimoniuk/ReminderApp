@@ -1,21 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {useHistory} from "react-router-dom";
-import addIcon from "../../images/icons/add.svg";
+import { useHistory } from "react-router-dom";
+import addIcon from "../../images/icons/add2.png";
 import styles from "./AddTask.module.css";
 
 const AddTask = ({ onClickHandler }) => {
-
   const history = useHistory();
-  
+
   return (
     <>
       <img
-        className={styles.add_icon}
+        className={styles.add__icon}
         src={addIcon}
         alt="plus"
-        onClick={() => {history.push("/"); 
-        onClickHandler()}}
+        onClick={() => {
+          history.push("/");
+          onClickHandler();
+        }}
       />
     </>
   );

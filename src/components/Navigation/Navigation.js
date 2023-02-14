@@ -7,22 +7,24 @@ const Navigation = ({ mobileNav }) => {
   return (
     <nav
       className={
-        mobileNav === "default" ? styles.navigation : styles.activeMobile
+        mobileNav === "default"
+          ? styles.navigation
+          : styles.navigation__activeMobile
       }
     >
-      <ul className={styles.list}>
-        <li className={styles.list_element}>
-          <Link to="/" className={styles.list_link}>
+      <ul className={styles.navigation__list}>
+        <li className={styles.navigation__list_element}>
+          <Link to="/" className={styles.navigation__list_link}>
             Home
           </Link>
         </li>
-        <li className={styles.list_element}>
-          <Link to="/done" className={styles.list_link}>
+        <li className={styles.navigation__list_element}>
+          <Link to="/done" className={styles.navigation__list_link}>
             Done
           </Link>
         </li>
-        <li className={styles.list_element}>
-          <Link to="/undone" className={styles.list_link}>
+        <li className={styles.navigation__list_element}>
+          <Link to="/undone" className={styles.navigation__list_link}>
             Undone
           </Link>
         </li>

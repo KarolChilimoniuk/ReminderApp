@@ -1,103 +1,103 @@
-.background {
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 100%;
-    min-height: 100vh;
-    position: absolute;
-    width: 100vw;
-    top: 0;
-    z-index: 2;
+.newTask__background {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  min-height: 100vh;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  z-index: 2;
 }
 
-.form_container {
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    height: 30%;
-    justify-content: center;
-    padding: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40%;
-    z-index: 2;
+.newTask__form_container {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  justify-content: center;
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  z-index: 2;
 }
 
-.form {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+.newTask__form {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
-.form_element {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: row;
-    height: 50px;
-    margin-top: 10px;
-    position: relative;
-    width: 100%;
+.newTask__form_element {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
 }
 
-.label {
-    align-self: center;
-    text-transform: uppercase;
+.newTask__label {
+  align-self: center;
+  text-transform: uppercase;
 }
 
-.image {
-    align-self: flex-end;
-    cursor: pointer;
-    width: 50px;
+.newTask__image {
+  align-self: flex-end;
+  cursor: pointer;
+  width: 50px;
 }
 
-.input {
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 10px;
-    border-width: 1px;
-    font-family: 'Nova Mono', monospace;
-    height: 40px;
-    margin-left: 10px;
-    padding: 5px;
-    position: absolute;
-    right: 0;
-    width: 60%;
+.newTask__input {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  border-width: 1px;
+  font-family: "Nova Mono", monospace;
+  height: 40px;
+  margin-left: 10px;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  width: 60%;
 }
 
-.submit {
-    align-self: center;
-    background-color: transparent;
-    border: 0.5px solid black;
-    border-radius: 50px;
-    cursor: pointer;
-    font-family: 'Nova Mono', monospace;
-    margin-top: 30px;
-    padding: 10px 20px 10px 20px;
-    text-transform: uppercase;
-    transition: border 0.4s 0.1s ease, color 0.5s 0.1s ease;
+.newTask__submit {
+  align-self: center;
+  background-color: transparent;
+  border: 0.5px solid black;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Nova Mono", monospace;
+  margin-top: 30px;
+  padding: 10px 20px 10px 20px;
+  text-transform: uppercase;
+  transition: border 0.4s 0.1s ease, color 0.5s 0.1s ease;
 }
 
-.submit:hover {
-    border: 0.5px solid rgb(50, 50, 255);
-    color: rgb(50, 50, 255);
+.newTask__submit:hover {
+  border: 0.5px solid rgb(50, 50, 255);
+  color: rgb(50, 50, 255);
 }
 
-@media(max-width: 1024px) {
-    .form_container {
-        min-height: 220px;
-        min-width: 270px;
-    }
+@media (max-width: 1024px) {
+  .newTask__form_container {
+    min-height: 220px;
+    min-width: 270px;
+  }
 
-    .image {
-        width: 30px;
-    }
+  .newTask__image {
+    width: 30px;
+  }
 
-    .label {
-        font-size: 0.7rem;
-    }
+  .newTask__label {
+    font-size: 0.7rem;
+  }
 
-    .input {
-        width: 50%;
-    }
+  .newTask__input {
+    width: 50%;
+  }
 }

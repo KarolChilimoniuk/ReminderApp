@@ -1,75 +1,76 @@
 .list {
-    margin-top: 100px;
-    list-style: none;
-    padding: 0;
-    width: 80%;
+  margin-top: 100px;
+  list-style: none;
+  padding: 0;
+  width: 80%;
 }
 
-.list_element {
-    border-radius: 15px;
-    margin-top: 20px;
-    max-width: 100%;
-    padding: 10px;
+.list__element {
+  border-radius: 15px;
+  margin-top: 20px;
+  max-width: 100%;
+  padding: 10px;
 }
 
-.list_element_done {
-    border-radius: 15px;
-    margin-top: 20px;
-    max-width: 100%;
-    opacity: 0.5;
-    padding: 10px;
+.list__element_done {
+  border-radius: 15px;
+  margin-top: 20px;
+  max-width: 100%;
+  opacity: 0.5;
+  padding: 10px;
 }
 
-.list_element:nth-child(odd), .list_element_done:nth-child(odd) {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-.list_element:nth-child(even) {
-    background-color: rgba(198, 174, 174, 0.9);
-    max-width: 100%;
-}
-
+.list__element:nth-child(odd),
 .list_element_done:nth-child(odd) {
-    background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-.list_element_done:nth-child(even) {
-    background-color: rgba(198, 174, 174, 0.9);
-    max-width: 100%;
+.list__element:nth-child(even) {
+  background-color: rgba(198, 174, 174, 0.9);
+  max-width: 100%;
 }
 
-.list_paragraph {
-    word-wrap: break-word;
+.list__element_done:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-.list_element_image {
-    cursor: pointer;
-    margin-right: 30px;
-    width: 30px;
+.list__element_done:nth-child(even) {
+  background-color: rgba(198, 174, 174, 0.9);
+  max-width: 100%;
+}
+
+.list__paragraph {
+  word-wrap: break-word;
+}
+
+.list__element_image {
+  cursor: pointer;
+  margin-right: 30px;
+  width: 30px;
 }
 
 .paragraph {
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 15px;
-    left: 50%;
-    margin: 0;
-    padding: 20px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  left: 50%;
+  margin: 0;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
 }
 
-.span {
-    text-transform: uppercase;
+.list__span {
+  text-transform: uppercase;
 }
 
-@media(max-width: 1023px) {
-    .list_paragraph {
-        font-size: 0.9rem
-    }
-    
-    .span {
-        font-size: 0.9rem
-    }
+@media (max-width: 1023px) {
+  .list__paragraph {
+    font-size: 0.9rem;
+  }
+
+  .list__span {
+    font-size: 0.9rem;
+  }
 }

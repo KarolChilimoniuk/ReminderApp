@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { HashRouter as Router, Switch, Route, useHistory } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Navigation/Navigation";
 import { Home } from "./views/HomeView/HomeView";
@@ -13,8 +13,6 @@ import Footer from "./components/Footer/Footer";
 function App() {
   const [modalVisibility, changeModalVisibility] = useState(false);
   const [mobileNavStatus, handleMobileNavStatus] = useState("default");
-
-  const history = useHistory();
 
   useEffect(() => {
     if (JSON.parse(localStorage.getItem("tasks")) === null) {

@@ -1,15 +1,15 @@
-.add_icon {
-    cursor: pointer;
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    width: 50px;
-    z-index: 2;
+.add__icon {
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 50px;
+  z-index: 2;
 }
 
-@media(max-width: 1023px) {
-    .add_icon {
-        top: 20px;
-        right: 20px;
-    }
+@media (max-width: 1023px) {
+  .add__icon {
+    top: 20px;
+    right: 20px;
+  }
 }

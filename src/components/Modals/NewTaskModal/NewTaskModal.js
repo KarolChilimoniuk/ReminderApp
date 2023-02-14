@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
 import { useHistory } from "react-router-dom";
-=======
->>>>>>> b9bad0a31c0e7e3e8803982ed09a6fc5a21a7228
 import PropTypes from "prop-types";
-import {useHistory} from "react-router-dom";
+import {
+  nameHandler,
+  finalDateHandler,
+  saveNewTask,
+} from "../../../utils/newTaskModal";
 import NewTaskModel from "../../../models/taskModel";
 import Cross from "../../../images/icons/error.svg";
 import styles from "./NewTaskModal.module.css";
@@ -12,100 +13,65 @@ import styles from "./NewTaskModal.module.css";
 const NewTaskModal = ({ visible, onClickHandler }) => {
   const history = useHistory();
 
-  let [newTask, newTaskData] = useState({
+  let [newTask, setNewTaskData] = useState({
     name: "",
     finalDate: "",
   });
 
-  const nameHandler = (e) => {
-    newTaskData({
-      name: e.target.value,
-      finalDate: newTask.finalDate,
-    });
-  };
-
-  const finalDateHandler = (e) => {
-    console.log(e.target.value);
-    newTaskData({
-      name: newTask.name,
-      finalDate: e.target.value,
-    });
-  };
-
-  const saveNewTask = () => {
-    if (newTask.finalDate !== "" && newTask.name !== "") {
-      const newTasksContainer = JSON.parse(localStorage.getItem("tasks"));
-      newTasksContainer.push(new NewTaskModel(newTask.name, newTask.finalDate));
-      localStorage.setItem("tasks", JSON.stringify(newTasksContainer));
-    } else {
-      alert("Set task name and final date!");
-    }
-  };
-
   return visible ? (
-    <div className={styles.background}>
-      <div className={styles.form_container}>
+    <div className={styles.newTask__background}>
+      <div className={styles.newTask__form_container}>
         <img
-          className={styles.image}
+          className={styles.newTask__image}
           src={Cross}
           alt="close"
           onClick={onClickHandler}
         />
         <form
-          className={styles.form}
+          className={styles.newTask__form}
           onSubmit={() => {
-<<<<<<< HEAD
             if (newTask.finalDate !== "" && newTask.name !== "") {
               alert(
                 `New task is added: ${newTask.name}, \nFinal date: ${newTask.finalDate}`
               );
               history.push("/undone");
-=======
-            if(newTask.finalDate !== "" && newTask.name !== "") {
-              alert(`Added new task: ${newTask.name}, \nDeadline: ${newTask.finalDate}`);
-              history.push('/undone');
->>>>>>> b9bad0a31c0e7e3e8803982ed09a6fc5a21a7228
               onClickHandler();
-              newTaskData({
+              setNewTaskData({
                 name: "",
                 finalDate: "",
               });
             }
           }}
         >
-          <div className={styles.form_element}>
-            <label className={styles.label} htmlFor="taskName">
+          <div className={styles.newTask__form_element}>
+            <label className={styles.newTask__label} htmlFor="taskName">
               Task name
             </label>
             <input
-              className={styles.input}
+              className={styles.newTask__input}
               type="text"
               id="taskName"
-              onChange={nameHandler}
-<<<<<<< HEAD
+              onChange={(e) => nameHandler(e, newTask, setNewTaskData)}
               placeholder="Task name"
               value={newTask.name}
-=======
-              placeholder="Zadanie"
->>>>>>> b9bad0a31c0e7e3e8803982ed09a6fc5a21a7228
             />
           </div>
-          <div className={styles.form_element}>
-            <label className={styles.label} htmlFor="taskDate">
+          <div className={styles.newTask__form_element}>
+            <label className={styles.newTask__label} htmlFor="taskDate">
               Final date
             </label>
             <input
-              className={styles.input}
+              className={styles.newTask__input}
               type="date"
               id="taskDate"
-              onChange={finalDateHandler}
+              onChange={(e) => finalDateHandler(e, newTask, setNewTaskData)}
             />
           </div>
           <input
-            className={styles.submit}
+            className={styles.newTask__submit}
             type="submit"
             value="Add task"
-            onClick={saveNewTask}
+            onClick={() => saveNewTask(newTask, NewTaskModel)}
           />
         </form>
       </div>
