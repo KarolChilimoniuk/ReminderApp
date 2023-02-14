@@ -1,31 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "859debf708cd1382842d3b5af8d6008c",
+    "revision": "f70bfe65663028ae6c8bacc716b6b040",
     "url": "/ReminderApp/index.html"
   },
   {
-    "revision": "9adadb5d0b2656747fbf",
-    "url": "/ReminderApp/static/css/main.179b7737.chunk.css"
+    "revision": "9442889244b1ae78bc9e",
+    "url": "/ReminderApp/static/css/main.beeaef72.chunk.css"
   },
   {
-    "revision": "64dd8b322540788117cb",
-    "url": "/ReminderApp/static/js/2.888f73cd.chunk.js"
+    "revision": "7bb29b5b7382f45ccad9",
+    "url": "/ReminderApp/static/js/2.09abead5.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/ReminderApp/static/js/2.888f73cd.chunk.js.LICENSE.txt"
+    "url": "/ReminderApp/static/js/2.09abead5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9adadb5d0b2656747fbf",
-    "url": "/ReminderApp/static/js/main.0c56919e.chunk.js"
+    "revision": "9442889244b1ae78bc9e",
+    "url": "/ReminderApp/static/js/main.c795dd6e.chunk.js"
   },
   {
     "revision": "5532ae4fd3dc1da804a0",
     "url": "/ReminderApp/static/js/runtime-main.4feae187.js"
-  },
-  {
-    "revision": "f93faf493184f8c7e50d8e8eb39cf63f",
-    "url": "/ReminderApp/static/media/add.f93faf49.svg"
   },
   {
     "revision": "0c141b91e3218a13770b5578f00376d6",
