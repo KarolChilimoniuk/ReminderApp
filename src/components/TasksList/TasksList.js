@@ -24,11 +24,11 @@ const TasksList = ({ tasksType }) => {
             .map((taskToShow) => (
               <li className={styles.list__element_done} key={taskToShow.id}>
                 <h3 className={styles.list__paragraph}>
-                  Zadanie:{" "}
+                  Task:{" "}
                   <span className={styles.list__span}>{taskToShow.name}</span>
                 </h3>
                 <h3 className={styles.list__paragraph}>
-                  Termin:{" "}
+                  Final date:{" "}
                   <span className={styles.list__span}>{taskToShow.term}</span>
                 </h3>
                 <img

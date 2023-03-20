@@ -28,7 +28,9 @@ function App() {
             <Burger
               mobileNavStatusHandler={() =>
                 handleMobileNavStatus((prevStatus) =>
-                  mobileNavStatus === "default" ? "active" : "default"
+                  mobileNavStatus === "default"
+                    ? handleMobileNavStatus("active")
+                    : handleMobileNavStatus("default")
                 )
               }
             />

@@ -1,4 +1,5 @@
 .navigation {
+  display: block;
   width: 100%;
 }
 
@@ -42,6 +43,9 @@
 }
 
 @media (max-width: 1023px) {
+  .navigation {
+    display: none;
+  }
   .navigation__activeMobile {
     align-items: center;
     clip-path: polygon(0% 0%, 38% 0, 100% 32%, 58% 100%, 0% 100%);
